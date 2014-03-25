@@ -28,11 +28,11 @@ class GraffitiMonkey(object):
     def __init__(self, region):
         # This list of tags associated with an EC2 instance to propagate to 
         # attached EBS volumes
-        self._instance_tags_to_propagate = ['Name']
+        self._instance_tags_to_propagate = ['Name','Product','Client']
         
         # This is a list of tags associated with a volume to propagate to
         # a snapshot created from the volume 
-        self._volume_tags_to_propagate = ['Name', 'instance_id', 'device']
+        self._volume_tags_to_propagate = ['Name','instance_id','device','Product','Client']
         
         # The region to operate in
         self._region = region
